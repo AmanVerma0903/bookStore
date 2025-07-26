@@ -14,7 +14,7 @@ import React from 'react'
   <div className="card-body">
     <h2 className="card-title">
       {item.name}
-      <div className="badge badge-primary">{item.category}</div>
+      <div className="badge badge-primary ">{item.category}</div>
     </h2>
     <p>{item.title}</p>
     <div className="card-actions justify-between">

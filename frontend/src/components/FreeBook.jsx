@@ -1,11 +1,28 @@
-import React from 'react'
-import list from '../list.json'; 
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Cards from "./Cards.jsx"
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 
 export default function FreeBook() {
+  const [book,setbook] = useState([]); //first empty array
+  useEffect(()=>{
+    const filterBook = async()=>{
+        try {
+        const res= await  axios.get("http://localhost:3000/book");
+        
+        const data = res.data.filter((data) => 
+    data.category === "Free")
+        console.log(data);
+        setbook(data);
+        } catch (error) {
+          console.error("Error fetching books:", error);
+        }
+    }
+    filterBook();
+  },[])
     var settings = {
     dots: true,
     infinite: false,
@@ -20,6 +37,7 @@ export default function FreeBook() {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
+          
           dots: true
         }
       },
@@ -40,10 +58,7 @@ export default function FreeBook() {
       }
     ]
 };
-   const filterData = list.filter((data) => 
-    data.category === "Free"
-   )
-   console.log(filterData);
+  
   return (
     <>
     <div className='pl-20 my-10  mt-15'>
@@ -51,11 +66,11 @@ export default function FreeBook() {
                     <h1 className='text-xl  font-semibold pb-2'>Free Offered Courses</h1>
         <p className='font-extralight pt-3 pr-18 mb-10'>Discover a curated collection of high-quality books available completely free of cost. Whether you're looking to upskill, explore new topics, or dive deeper into your passions, these books are handpicked to help you grow without spending a penny. Start learning, growing, and exploring today with no subscriptions and no hidden fees.</p>
         </div>
-
+     
     
     <div>
          <Slider {...settings}>
-        {filterData.map((item)=>{
+        {book.map((item)=>{
            return <Cards item = {item} key = {item.id}/>
         })}
       </Slider>

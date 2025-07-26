@@ -1,23 +1,53 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useForm } from "react-hook-form"
+import axios from 'axios'
+import toast from 'react-hot-toast'
 
 export default function Login() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm()
-
-  const onSubmit = (data) => {
-    console.log(data)
-  }
+const {
+      register,
+      handleSubmit,
+      formState: { errors },
+    } = useForm()
+  
+    const onSubmit =async (data) => {
+      const userdata = {
+        
+        email: data.email,
+        password : data.password
+      }
+      console.log(userdata);
+      await axios.post("http://localhost:3000/user/login", userdata)
+      .then((res)=>{
+    
+        if(res.data){
+       
+      
+       
+        toast.success("Login Successful");
+        setTimeout(()=>{
+            localStorage.setItem("User",JSON.stringify(res.data.user));//store user data in local storage so that we can use it later for authentication in frontend ab local storage se kahi bhi use kar skte hai 
+          document.getElementById('my_modal_3').close()
+          window.location.reload(); //reload the page to reflect the changes
+        },1500)
+        }
+      })
+      .catch((err)=>{
+        
+       if(err.response ) {
+        console.log(err);
+          toast.error(err.response.data.message);
+          
+        } 
+      }
+    )}
 
   return (
     <div>
       <dialog id="my_modal_3" className="modal">
         <div className="modal-box">
-          <form onSubmit={handleSubmit(onSubmit)} method="dialog">
+          <form onSubmit={handleSubmit(onSubmit)} >
             {/* Close button */}
             <button type="button" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" onClick={() => document.getElementById('my_modal_3').close()}>✕</button>
 

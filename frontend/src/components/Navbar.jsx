@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import Login from './Login';
-
-
+import { useAuth } from '../context/AuthProvider';
+import Logout from './Logout';
 export default function Navbar() {
+ const [authUser] = useAuth();
+
   const [sticky,setSticky] = useState(false);
   useEffect(()=>{
     const handleScroll = ()=>{
@@ -79,16 +81,21 @@ export default function Navbar() {
   </svg>
   <input type="search" required placeholder="Search" className="outline-none focus:ring-0 focus:border-transparent " />
 </label>
-  
-    <a className="btn rounded-md hover:bg-slate-800 cursor-pointer"
-      onClick = {()=> document.getElementById("my_modal_3").showModal()}>
+{authUser ? (
+  <Logout />
+) : (
+  <>
+    <a
+      className="btn rounded-md hover:bg-slate-800 cursor-pointer"
+      onClick={() => document.getElementById("my_modal_3").showModal()}
+    >
+      Login
+    </a>
+    <Login />
+  </>
+)
 
-
-
-       
-      Login</a>
-      <Login />
-  
+}
   </div>
 </div>
     </>

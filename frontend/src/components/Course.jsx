@@ -1,9 +1,23 @@
 import React from 'react'
-import list from '../list.json'; 
+import { useState } from 'react';
 import Cards from './Cards';
-
+import { useEffect } from 'react';
+import axios from 'axios';
 export default function Course() {
-    console.log(list);
+  const [book, setBook] = useState([]);
+  useEffect(() =>{
+   const getBook = async()=>{
+        try {
+        const res= await  axios.get("http://localhost:3000/book");
+        console.log(res.data);
+        setBook(res.data);
+        } catch (error) {
+          console.error("Error fetching books:", error);
+        }
+   }
+   getBook();
+  },[]);
+    
   return (
    <>
     <div className='pl-20 flex flex-row my-10 items-center text-center justify-center'>
@@ -14,7 +28,7 @@ export default function Course() {
 </p>
 
            <div className='flex flex-row flex-wrap justify-center gap-10 mt-10 ' >{
-               list.map((item)=>(
+               book.map((item)=>(
                 <Cards key={item.id} item ={item} />
                ))
 
