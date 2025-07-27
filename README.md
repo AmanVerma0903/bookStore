@@ -2,6 +2,15 @@
 
 A modern, full-stack online bookstore application built with React, Node.js, and MongoDB. BOOKLY provides a seamless experience for users to browse, discover, and access educational books and courses.
 
+## 🚀 Live Demo & Deployment
+
+**Experience BOOKLY Live!**
+
+* **Frontend (User Interface):** [https://book-store-mxyz.vercel.app/](https://book-store-mxyz.vercel.app/)
+* **Backend (API Endpoint):** [https://bookstore-zii3.onrender.com](https://bookstore-zii3.onrender.com)
+
+---
+
 ## 🌟 Features
 
 ### 🔐 Authentication System
@@ -196,7 +205,7 @@ The application is fully responsive and optimized for:
 - Deployed to Vercel
 - Configure API endpoints for production
 
-<<<<<<< HEAD
+
 ## 🤝 Contributing
 
 1. Fork the repository
@@ -205,27 +214,21 @@ The application is fully responsive and optimized for:
 4. Test thoroughly
 5. Submit a pull request
 
-## 📄 License
 
-This project is licensed under the ISC License.
 
-## 👨‍💻 Author
 
-=======
 
 
 ## 👨‍💻 Author
 
 **Aman Verma**
 
->>>>>>> ff159e1b68acab1cf05dc4f7a528431336edee41
+
 Created with ❤️ for the BOOKLY online bookstore platform.
 
 ---
 
-<<<<<<< HEAD
-**BOOKLY** - Your gateway to knowledge and learning! 📚✨ 
-=======
-**BOOKLY** - Your gateway to knowledge and learning! 📚✨
 
->>>>>>> ff159e1b68acab1cf05dc4f7a528431336edee41
+**BOOKLY** - Your gateway to knowledge and learning! 📚✨ 
+
+
