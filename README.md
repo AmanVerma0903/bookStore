@@ -4,10 +4,12 @@ A modern, full-stack online bookstore application built with React, Node.js, and
 
 ## 🚀 Live Demo & Deployment
 
+
 **Experience BOOKLY Live!**
 
 * **Frontend (User Interface):** [https://book-store-mxyz.vercel.app/](https://book-store-mxyz.vercel.app/)
 * **Backend (API Endpoint):** [https://bookstore-zii3.onrender.com](https://bookstore-zii3.onrender.com)
+    * *Note: This is the base URL for the API. It is not designed to be browsed directly, but serves data to the frontend. Refer to the 'API Endpoints' section below for specific routes.*
 
 ---
 
