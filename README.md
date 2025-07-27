@@ -13,6 +13,17 @@ A modern, full-stack online bookstore application built with React, Node.js, and
 
 ---
 
+## 🖼️ Landing Page Preview
+
+Here's a preview of the BOOKLY online bookstore platform:
+
+![BOOKLY Landing Page](https://github.com/AmanVerma0903/bookStore/blob/bfe1f60eba0aab875af02ac36b67ceef25237606/bookly.png)
+
+---
+
+
+
+
 ## 🌟 Features
 
 ### 🔐 Authentication System
