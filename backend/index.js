@@ -29,6 +29,16 @@ app.use(cors());
 app.use(express.json()); //to parse json data
 app.use(express.urlencoded({ extended: true })); //to parse urlencoded data
 
+// Add root route
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'BOOKLY Backend API is running!',
+    endpoints: {
+      books: '/book',
+      users: '/user'
+    }
+  });
+});
 
 app.use("/book", bookRoutes);
 app.use('/user',userRoutes);

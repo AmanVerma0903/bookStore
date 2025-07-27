@@ -22,7 +22,7 @@ export default function SignUp() {
       password: data.password
     }
          try {
-       const res = await axios.post("http://localhost:3000/user/signup", userdata)
+       const res = await axios.post("https://bookstore-zii3.onrender.com/user/signup", userdata)
        if (res.data) {
          toast.success("Signup Successful");
          localStorage.setItem("User", JSON.stringify(res.data.newUser));
