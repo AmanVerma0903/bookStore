@@ -187,13 +187,13 @@ The application is fully responsive and optimized for:
 ## 🚀 Deployment
 
 ### Backend Deployment
-- Deploy to platforms like Heroku, Railway, or DigitalOcean
+- Deployed to Render
 - Set environment variables for production
 - Configure MongoDB connection
 
 ### Frontend Deployment
 - Build the application: `npm run build`
-- Deploy to Vercel, Netlify, or similar platforms
+- Deployed to Vercel
 - Configure API endpoints for production
 
 <<<<<<< HEAD
