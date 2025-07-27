@@ -196,6 +196,7 @@ The application is fully responsive and optimized for:
 - Deploy to Vercel, Netlify, or similar platforms
 - Configure API endpoints for production
 
+<<<<<<< HEAD
 ## 🤝 Contributing
 
 1. Fork the repository
@@ -210,8 +211,21 @@ This project is licensed under the ISC License.
 
 ## 👨‍💻 Author
 
+=======
+
+
+## 👨‍💻 Author
+
+**Aman Verma**
+
+>>>>>>> ff159e1b68acab1cf05dc4f7a528431336edee41
 Created with ❤️ for the BOOKLY online bookstore platform.
 
 ---
 
+<<<<<<< HEAD
 **BOOKLY** - Your gateway to knowledge and learning! 📚✨ 
+=======
+**BOOKLY** - Your gateway to knowledge and learning! 📚✨
+
+>>>>>>> ff159e1b68acab1cf05dc4f7a528431336edee41
